@@ -11,8 +11,8 @@ app.get('/', function(request, response){
     response.send(html);
 });
 
-app.set('port', (process.env.PORT || 8080))
+var port = process.env.PORT || 8080;
 
-http.createServer(app).listen(app.get('port'), function(){
-    console.log("Listen on " + app.get('port'));
+http.createServer(app).listen(port, function(){
+    console.log("Listen on " + port);
 });
